@@ -1,8 +1,26 @@
 aid: alphin
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alphin.png
 name: alphin
-description: 'alphin is a company surfaced as a portfolio company of hv-capital, partech and added to
-  the API Evangelist network as a stub for enrichment. Sector: ai-enterprise-software. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: 'alphin is a Berlin-based marketing platform for local small businesses, giving restaurants,
+  cafes, salons, and similar SMBs an all-in-one app to manage and automate their online presence. Its
+  product suite spans review collection (alphin Reviews), Instagram and social management (alphin Socials),
+  professional photography (alphin Photos), local influencer marketing (alphin Local Influencers), targeted
+  Instagram advertising (alphin Local Ads), and multi-platform profile management across Google, TripAdvisor,
+  and Yelp (alphin Portals), consolidated into one dashboard with daily reporting and analytics. Founded
+  in 2016 (as Freachly GmbH), alphin serves 1,000+ local businesses across Germany, Austria, the UK, and
+  Israel, and is backed by HV Capital, Partech, Scale Capital, and Wille Finance. alphin publishes no
+  public API, developer portal, or SDKs; the product is delivered through its web and mobile Business App.'
 url: https://raw.githubusercontent.com/api-evangelist/alphin/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +29,19 @@ x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-sector: local-marketing-smb-saas
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
-- Ai Enterprise Software
+- Marketing
+- Local Marketing
+- Small Business
+- Social Media
+- Reviews
+- Advertising
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -26,3 +51,16 @@ maintainers:
 common:
 - type: Website
   url: https://www.alphin.com/
+- type: Blog
+  url: https://www.alphin.com/en/blog-en
+- type: Login
+  url: https://app.alphin.io
+- type: TermsOfService
+  url: https://www.alphin.com/en/gtc
+- type: PrivacyPolicy
+  url: https://www.alphin.com/en/utility-pages/data-protection
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
