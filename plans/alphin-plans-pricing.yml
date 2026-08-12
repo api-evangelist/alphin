@@ -1,0 +1,33 @@
+generated: '2026-08-12'
+method: searched
+source: https://start.alphin.com/alphin_products
+name: alphin plans and pricing
+description: >-
+  alphin publishes no public pricing. There is no /pricing page on www.alphin.com
+  (https://www.alphin.com/en/pricing returns 404) and no plan or tier table on the
+  product pages. Every commercial call-to-action across the marketing site and the
+  start.alphin.com landing page routes to "Book a demo" / a 15-minute consultation
+  form. The only monetary figure published anywhere is a promotional
+  "200 € Start-Guthaben" (200 EUR starting credit) incentive on the landing page,
+  which is an acquisition offer rather than a plan.
+plan_count: 0
+plans: []
+currency: EUR
+billing_model: sales-led
+public_pricing: false
+signup_path: demo-request
+notes:
+- >-
+  Pricing is quoted per business after a consultation; alphin sells to local SMBs
+  (restaurants, cafes, salons) through a sales/demo motion, not self-serve checkout.
+- >-
+  No machine-readable pricing or catalog endpoint exists — api.alphin.io is the
+  authenticated Business App backend and returns 401 on every path.
+evidence:
+- url: https://www.alphin.com/en/pricing
+  status: 404
+- url: https://start.alphin.com/alphin_products
+  status: 200
+- url: https://www.alphin.com/products-en/review-management
+  status: 200
+checked: '2026-08-12'

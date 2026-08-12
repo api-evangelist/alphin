@@ -32,7 +32,7 @@ x-tier-reason: portfolio-lead
 x-sector: local-marketing-smb-saas
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-12'
 tags:
 - Company
 - Marketing
@@ -49,6 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/alphin-domain-security.yml
+- type: LLMsTxt
+  url: llms/alphin-llms.txt
+- type: Plans
+  url: plans/alphin-plans-pricing.yml
 - type: Website
   url: https://www.alphin.com/
 - type: Blog
@@ -60,7 +66,27 @@ common:
 - type: PrivacyPolicy
   url: https://www.alphin.com/en/utility-pages/data-protection
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    alphin ships only an end-user Business App — the Angular SPA at app.alphin.io talks to
+    a private Express backend at api.alphin.io whose /v1 returns 401 and whose every
+    documentation path (/openapi.json, /swagger.json, /api-docs, /docs, /graphql) returns
+    "Cannot GET"; there is no developer portal, docs host (developer.alphin.com,
+    docs.alphin.com and docs.alphin.io do not resolve), SDK on any package registry, or
+    public GitHub organization.
+  evidence:
+  - url: https://api.alphin.io/openapi.json
+    status: 404
+  - url: https://api.alphin.io/v1
+    status: 401
+  - url: https://www.alphin.com/llms.txt
+    status: 404
+  - url: https://www.alphin.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'

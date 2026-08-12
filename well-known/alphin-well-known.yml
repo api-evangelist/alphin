@@ -1,0 +1,99 @@
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of every alphin host named in apis.yml
+note: >-
+  No pointer is emitted for this probe. Every canonical /.well-known/ path on the
+  marketing host (www.alphin.com) returned 404. Every path on the Business App host
+  (app.alphin.io) returned HTTP 200 with the Angular single-page-app shell
+  (<!doctype html> ... <title>alphin</title>) rather than a document — an SPA
+  catch-all route, not a served well-known resource. Those 200s are recorded here as
+  misses, not hits. The app backend host (api.alphin.io) is an Express service that
+  404s every well-known path.
+hosts:
+- host: www.alphin.com
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: app.alphin.io
+  note: >-
+    SPA catch-all. All paths answer 200 text/html with the same Angular index shell.
+    Treated as misses.
+  paths:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    document: false
+    file: null
+- host: api.alphin.io
+  note: >-
+    Express application backing the alphin Business App. Root and all well-known paths
+    return "Cannot GET <path>". /v1 and /v1/openapi.json return 401 with an empty body —
+    the surface is authenticated and no contract is published.
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+summary:
+  paths_probed: 20
+  documents_served: 0
+  pointer_emitted: false
+checked: '2026-08-12'

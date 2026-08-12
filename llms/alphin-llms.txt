@@ -1,0 +1,58 @@
+# alphin
+
+> alphin (alphin GmbH, formerly Freachly GmbH, Berlin) is a local-marketing platform for
+> small businesses — restaurants, cafes, salons and similar SMBs — delivered as an
+> all-in-one web and mobile Business App. It does not publish a public API, developer
+> portal, SDKs or webhooks.
+
+alphin consolidates online-presence management for local businesses into a single
+dashboard with daily reporting and analytics. Founded 2016, serving 1,000+ local
+businesses across Germany, Austria, the UK and Israel. Backed by HV Capital, Partech,
+Scale Capital and Wille Finance.
+
+## Products
+
+- [alphin Reviews](https://www.alphin.com/products-en/review-management): review collection and management across Google, TripAdvisor, Yelp and other review platforms.
+- [alphin Socials](https://www.alphin.com/products-en/instagram-management): Instagram and social account management, full service.
+- [alphin Photos](https://www.alphin.com/products-en/photo): professional photography, shot and distributed to the business's profiles.
+- [alphin Local Influencers](https://www.alphin.com/products-en/influencer-marketing): automated local influencer marketing against a pool of verified local-reach influencers.
+- [alphin Local Ads](https://www.alphin.com/products-en/instagram-ads): targeted Instagram advertising for a local radius.
+- [alphin Portals](https://www.alphin.com/products-en/online-profile-management): multi-platform business-profile management across Google, TripAdvisor and Yelp.
+
+## Company
+
+- [Home](https://www.alphin.com/en/home): English marketing site.
+- [About](https://www.alphin.com/en/about): company, mission, team.
+- [Career](https://www.alphin.com/en/career): open roles.
+- [Blog](https://www.alphin.com/en/blog-en): English blog.
+- [Business App](https://app.alphin.io): the customer-facing application (login required).
+
+## Legal
+
+- [General Terms and Conditions](https://www.alphin.com/en/gtc)
+- [Data Protection](https://www.alphin.com/en/utility-pages/data-protection)
+- [Terms of Use](https://www.alphin.com/en/utility-pages/terms-of-use)
+- [Imprint](https://www.alphin.com/en/utility-pages/imprint)
+
+## Developer surface
+
+alphin has no developer program. As of 2026-08-12:
+
+- No OpenAPI, Swagger, GraphQL, AsyncAPI or gRPC contract is published on any alphin host.
+- No developer portal, API reference or getting-started guide exists; developer.alphin.com,
+  docs.alphin.com and docs.alphin.io do not resolve.
+- No first-party SDK or client library is published to npm, PyPI, RubyGems, crates.io or
+  any other registry.
+- No public GitHub organization.
+- `api.alphin.io` is the private backend serving the alphin Business App single-page
+  application. Its root and every well-known path return 404; `/v1` returns 401 with an
+  empty body. It is not offered to third-party developers and no contract for it is published.
+- No `/.well-known/` document is served on any alphin host. Requests to
+  `app.alphin.io/.well-known/*` return HTTP 200 with the Angular SPA shell, not a document.
+- No public pricing: commercial engagement is through a demo request.
+
+## Contact
+
+- Email: contact@alphin.com
+- Phone (DE): +49 303 1196710
+- Phone (UK): +44 203 9663326
